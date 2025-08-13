@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Sunrise Bakery</title>
+<meta name="description" content="Sunrise Bakery — fresh breads, pastries, and custom cakes made with love.">
+
+<style>
+:root{
+  --brand:#d97904;
+  --accent:#f2a65a;
+  --bg:#fff8f0;
+  --muted:#555;
+  font-family: 'Segoe UI', sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:#222;
+  line-height:1.5;
+}
+.container{
+  width:92%;
+  max-width:1100px;
+  margin:0 auto;
+  padding:1.25rem 0;
+}
+.site-header{
+  background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,0.05);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand{
+  font-weight:700;
+  color:var(--brand);
+  text-decoration:none;
+  font-size:1.3rem;
+}
+.site-nav ul{
+  display:flex;
+  gap:1.5rem;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.site-nav a{
+  text-decoration:none;
+  color:var(--brand);
+  font-weight:bold;
+}
+.hero{
+  background:linear-gradient(135deg, #f7b733, #fc4a1a);
+  color:#fff;
+  text-align:center;
+  padding:3rem 1rem;
+  border-radius:10px;
+  margin-top:1rem;
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+.hero img{
+  width:100%;
+  max: width 1100px;;
+  border-radius:12px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.2);
+  margin-top:1.5rem;
+  align-items: center;
+}
+.cards{
+  list-style:none;
+  padding:0;
+  margin:2rem 0;
+  display:grid;
+  gap:1.5rem;
+}
+.card{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+  transition:transform 0.2s;
+}
+.card:hover{transform:translateY(-5px);}
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+.card h3{
+  margin:0.8rem;
+  color:var(--brand);
+}
+.card p{
+  margin:0 0.8rem 1rem;
+  color:var(--muted);
+}
+.contact-short{
+  background:#fff3e6;
+  padding:1rem;
+  border-left:5px solid var(--brand);
+  margin-top:1rem;
+  border-radius:8px;
+}
+.site-footer{
+  background:#fff;
+  color:var(--muted);
+  text-align:center;
+  padding:1rem;
+  margin-top:2rem;
+  font-size:0.95rem;
+}
+.btn{
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color:white;
+  padding:0.6rem 1rem;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+  display:inline-block;
+  box-shadow:0 2px 6px rgba(0,0,0,0.2);
+}
+.btn:hover{opacity:0.9;}
+form{
+  background:#fff;
+  padding:1rem;
+  border-radius:12px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+.form-row{margin-bottom:0.8rem}
+label{display:block;margin-bottom:0.25rem;font-weight:600}
+input,textarea{
+  width:100%;
+  padding:0.5rem;
+  border:1px solid #ddd;
+  border-radius:6px;
+}
+.map-placeholder{
+  background:#f9f9f9;
+  border:2px dashed #ccc;
+  padding:2rem;
+  text-align:center;
+  border-radius:12px;
+  margin-top:1rem;
+}
+@media(min-width:768px){
+  .cards{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="brand">Sunrise Bakery</a>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="home" class="container">
+  <section class="hero">
+    <h1>Freshly Baked Every Morning</h1>
+    <p>Breads, pastries, and custom cakes made with love in Cityname.</p>
+    <a class="btn" href="#contact">Order / Contact</a>
+    <img src="baker.webp" alt="Fresh bakery bread" width="2000" height="200" >
+
+  </section>
+
+  <section>
+    <h2>Featured Services</h2>
+    <ul class="cards">
+      <li class="card">
+        <img src="bread.avif" alt="Sourdough bread">
+        <h3>Sourdough & Breads</h3>
+        <p>Hand-crafted sourdough, whole wheat and specialty loaves.</p>
+      </li>
+      <li class="card">
+        <img src="pastry.jpg" alt="Pastries">
+        <h3>Pastries & Breakfast</h3>
+        <p>Croissants, muffins, and daily breakfast specials.</p>
+      </li>
+      <li class="card">
+        <img src="cake.webp" alt="Custom cake">
+        <h3>Custom Cakes</h3>
+        <p>Custom celebration cakes — design consultation available.</p>
+      </li>
+    </ul>
+  </section>
+
+  <aside class="contact-short">
+    <h2>Visit or Order</h2>
+    <p><strong>Address:</strong> 123 Market St, Cityname</p>
+    <p><strong>Hours:</strong> Mon–Sat 7am–6pm</p>
+  </aside>
+</main>
+
+<section id="about" class="container">
+  <h1>About Us</h1>
+  <p class="lead">Welcome to Sunrise, a cozy home bakery where every treat is made from scratch with 
+    love, care, and the finest ingredients. What started as a passion for baking in our home kitchen has grown into 
+    a heartfelt business dedicated to bringing joy through delicious, homemade sweets. From custom cakes and cupcakes to 
+    cookies and pastries, everything we make is handcrafted in small batches to ensure quality and freshness. Whether you're 
+    celebrating a special occasion or simply craving something sweet, we're here to make life a little more delicious—one bite 
+    at a time</p>
+  <h2>History</h2>
+  <p>It all started with a little girl, a wooden spoon, and a big dream. Weekend mornings were filled with the smell of freshly baked cookies, flour-covered aprons,
+     and lots of laughter in the kitchen. What began as a childhood love for baking slowly turned into a true passion—one birthday cake and cupcake batch at a time.
+
+After years of sharing treats with friends, family, and every neighborhood gathering, the dream of a home bakery felt too sweet to ignore. In 2010, 
+Sunrise officially came to life right from our cozy kitchen. Today, we’re proud to bring a little homemade happiness to every order, 
+baking each treat with the same love that started it all. </p>
+  <h2>Meet the Team</h2>
+  <ul>
+    <li><strong>Prity Kumari</strong> — Head Baker</li>
+    <li><strong>Ciena Sunil</strong> — Pastry Chef</li>
+    <li><strong>Mahima Tom</strong> — Pastry Chef</li>
+  </ul>
+  <h2>Ingredients & Sourcing</h2>
+  <p>At Sunrise, we believe that delicious bakes start with the best ingredients. That’s why we use high-quality, locally sourced products 
+    whenever possible. From farm-fresh eggs and creamy butter to pure vanilla extract and seasonal fruits, everything we use is selected with care.
+     We proudly support local farmers and small suppliers who share our commitment to freshness and sustainability. You won’t find any artificial 
+     preservatives or shortcuts in our kitchen—just honest ingredients and a whole lot of love in every batch.</p>
+</section>
+
+<section id="contact" class="container">
+  <h1>Contact Us</h1>
+  <form id="contact-form" action="#" method="post" novalidate>
+    <div class="form-row">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required />
+    </div>
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required />
+    </div>
+    <div class="form-row">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <div class="form-row">
+      <button type="submit" class="btn">Send message</button>
+    </div>
+    <div id="form-status" role="status"></div>
+  </form>
+    
+    <div class="map-placeholder">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31108.123933303574!2d77.6102926!3d12.9566731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1405e0df0dd3%3A0x54fcd4ad8df3788!2sEmbassy%20Golf%20Links%20Business%20Park!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Sunrise Bakery — Freshness Guaranteed</p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if(!form.name.value || !form.email.value || !form.message.value){
+      status.textContent = 'Please fill in all fields.';
+      status.style.color = 'crimson';
+      return;
+    }
+    status.textContent = 'Message sent! (demo only)';
+    status.style.color = 'green';
+    form.reset();
+  });
+});
+</script>
+</body>
+</html>
